@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".pageSelectFragment">
+
+    <Button
+        android:id="@+id/selectBtn1"
+        android:layout_width="108dp"
+        android:layout_height="wrap_content"
+        android:text="@string/selectBtnText1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/selectBtn2"
+        android:layout_width="108dp"
+        android:layout_height="wrap_content"
+        android:text="@string/selectBtnText2"
+        app:layout_constraintStart_toEndOf="@+id/selectBtn1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/selectBtn4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/selectBtnText4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/selectBtn5"
+        android:layout_width="108dp"
+        android:layout_height="wrap_content"
+        android:text="@string/selectBtnText5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selectBtn1" />
+
+    <Button
+        android:id="@+id/selectBtn6"
+        android:layout_width="108dp"
+        android:layout_height="wrap_content"
+        android:text="@string/selectBtnText6"
+        app:layout_constraintStart_toEndOf="@+id/selectBtn5"
+        app:layout_constraintTop_toBottomOf="@+id/selectBtn2" />
+
+    <Button
+        android:id="@+id/selectBtn7"
+        android:layout_width="108dp"
+        android:layout_height="wrap_content"
+        android:text="@string/selectBtnText7"
+        app:layout_constraintStart_toEndOf="@+id/selectBtn6"
+        app:layout_constraintTop_toBottomOf="@+id/selectBtn2" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="108dp"
+        android:layout_height="wrap_content"
+        android:text="@string/selectBtnText3"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/selectBtn2"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

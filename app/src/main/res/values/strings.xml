@@ -1,3 +1,29 @@
 <resources>
     <string name="app_name">controllerMaster</string>
+    <string name="mainActivityTxt">MainActivity</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="startBtnTxt">スタート</string>
+    <string name="projectorVideoBtn">pjBtn</string>
+    <string name="selectBtnText1">プロジェクタ\n映像選択</string>
+    <string name="selectBtnText2">モニタ\n映像選択</string>
+    <string name="selectBtnText3">環境\n操作</string>
+    <string name="selectBtnText4">システム\n終了</string>
+    <string name="selectBtnText5">プロジェクタ\n操作</string>
+    <string name="selectBtnText6">スクリーン\n操作</string>
+    <string name="selectBtnText7">照明\n操作</string>
+    <string name="selectBtnText8"> </string>
+    <string name="startMessageText">システム起動中です\nしばらくお待ちください</string>
+    <string name="countText">0%</string>
+    <string name="lightOnBtnText">ON</string>
+    <string name="lightOffBtnText">OFF</string>
+    <string name="monitorSelBtnText1">ソース１</string>
+    <string name="monitorSelBtnText2">ソース２</string>
+    <string name="monitorSelBtnText3">ソース３</string>
+    <string name="projectorSelBtnText1">ソース１</string>
+    <string name="projectorSelBtnText2">ソース２</string>
+    <string name="projectorSelBtnText3">ソース３</string>
+    <string name="screenUpBtnText">UP</string>
+    <string name="screenStopBtnText">STOP</string>
+    <string name="screenDownBtnText">DOWN</string>
 </resources>
