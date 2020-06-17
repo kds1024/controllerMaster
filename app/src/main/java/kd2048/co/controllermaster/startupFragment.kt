@@ -1,10 +1,12 @@
 package kd2048.co.controllermaster
 
+import android.content.IntentFilter
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ProgressBar
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -33,8 +35,22 @@ class startupFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
+        /**
+         * progressbar 初期設定
+         */
+        val view =  inflater.inflate(R.layout.fragment_startup, container, false)
+        val progress = view.findViewById<ProgressBar>(R.id.progressBar)
+        progress.max = 40
+
+        val receiver = progressReceiver()
+        val filter = IntentFilter()
+        filter.addAction("PROGRESS_UPDATE")
+        activity?.registerReceiver(receiver, filter)
+
+        return view
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_startup, container, false)
+        //return inflater.inflate(R.layout.fragment_startup, container, false)
     }
 
     companion object {

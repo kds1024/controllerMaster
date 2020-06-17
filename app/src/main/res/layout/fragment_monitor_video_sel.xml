@@ -8,38 +8,36 @@
 
     <!-- TODO: Update blank fragment layout -->
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment"
-        tools:layout_editor_absoluteX="44dp"
-        tools:layout_editor_absoluteY="-16dp" />
-
     <Button
         android:id="@+id/monitorSelBtn1"
-        android:layout_width="135dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/monitorSelBtnText1"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/monitorSelBtn2"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/monitorSelBtn3"
-        android:layout_width="136dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginLeft="4dp"
         android:text="@string/monitorSelBtnText3"
+        app:layout_constraintBottom_toBottomOf="@+id/monitorSelBtn2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/monitorSelBtn2"
         app:layout_constraintTop_toTopOf="@+id/monitorSelBtn2" />
 
     <Button
         android:id="@+id/monitorSelBtn2"
-        android:layout_width="136dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/monitorSelBtnText2"
+        app:layout_constraintBottom_toBottomOf="@+id/monitorSelBtn1"
+        app:layout_constraintEnd_toStartOf="@+id/monitorSelBtn3"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/monitorSelBtn1"
         app:layout_constraintTop_toTopOf="@+id/monitorSelBtn1" />
 

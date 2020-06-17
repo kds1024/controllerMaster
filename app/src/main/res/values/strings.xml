@@ -15,15 +15,21 @@
     <string name="selectBtnText8"> </string>
     <string name="startMessageText">システム起動中です\nしばらくお待ちください</string>
     <string name="countText">0%</string>
-    <string name="lightOnBtnText">ON</string>
-    <string name="lightOffBtnText">OFF</string>
-    <string name="monitorSelBtnText1">ソース１</string>
-    <string name="monitorSelBtnText2">ソース２</string>
-    <string name="monitorSelBtnText3">ソース３</string>
-    <string name="projectorSelBtnText1">ソース１</string>
-    <string name="projectorSelBtnText2">ソース２</string>
-    <string name="projectorSelBtnText3">ソース３</string>
-    <string name="screenUpBtnText">UP</string>
-    <string name="screenStopBtnText">STOP</string>
-    <string name="screenDownBtnText">DOWN</string>
+    <string name="lightOnBtnText">ＯＮ</string>
+    <string name="lightOffBtnText">ＯＦＦ</string>
+    <string name="monitorSelBtnText1">モニタ\nソース１</string>
+    <string name="monitorSelBtnText2">モニタ\nソース２</string>
+    <string name="monitorSelBtnText3">モニタ\nソース３</string>
+    <string name="projectorSelBtnText1">プロジェクタ\nソース１</string>
+    <string name="projectorSelBtnText2">プロジェクタ\nソース２</string>
+    <string name="projectorSelBtnText3">プロジェクタ\nソース３</string>
+    <string name="screenUpBtnText">ＵＰ</string>
+    <string name="screenStopBtnText">ＳＴＯＰ</string>
+    <string name="screenDownBtnText">ＤＯＷＭ</string>
+    <string name="projectorOnBtnText">ＯＮ</string>
+    <string name="projectorOffBtnText">ＯＦＦ</string>
+    <string name="projectorMuteBtnText">Ｍｕｔｅ</string>
+
+    <!-- システム起動待ち時間 -->
+    <string name="startupTime">10</string>
 </resources>

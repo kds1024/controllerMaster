@@ -8,30 +8,34 @@
 
     <Button
         android:id="@+id/screenUpBtn"
-        android:layout_width="135dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/screenUpBtnText"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/screenStopBtn"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/screenStopBtn"
-        android:layout_width="136dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/screenStopBtnText"
         app:layout_constraintBottom_toBottomOf="@+id/screenUpBtn"
+        app:layout_constraintEnd_toStartOf="@+id/screenDownBtn"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/screenUpBtn"
-        app:layout_constraintTop_toTopOf="@+id/screenUpBtn"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="@+id/screenUpBtn" />
 
     <Button
         android:id="@+id/screenDownBtn"
-        android:layout_width="136dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/screenDownBtnText"
         app:layout_constraintBottom_toBottomOf="@+id/screenStopBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/screenStopBtn"
-        app:layout_constraintTop_toTopOf="@+id/screenStopBtn"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="@+id/screenStopBtn" />
 </androidx.constraintlayout.widget.ConstraintLayout>

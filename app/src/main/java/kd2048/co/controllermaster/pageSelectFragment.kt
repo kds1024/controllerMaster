@@ -1,10 +1,12 @@
 package kd2048.co.controllermaster
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -33,8 +35,110 @@ class pageSelectFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
+        /**
+         * pageSelectFragmentのボタンを押下したらflagment2の画面表示を切り替える
+         */
+        val view = inflater.inflate(R.layout.fragment_page_select, container, false)
+
+        /**
+         * プロジェクタ映像選択ボタン押下 flagment切り替え
+         */
+        val selectBtn1 = view.findViewById<Button>(R.id.selectBtn1)
+        selectBtn1.setOnClickListener {
+            /**
+             * projectorVideoSelFragment 表示
+             */
+            val flagment = projectorVideoSelFragment()
+
+            // flagmentにはActivityが無いのでactivityを使ってMainactivityの
+            // contextを取得する(thisは使えない)
+            val flagmentManager = activity?.supportFragmentManager
+            val fragmentTransaction = flagmentManager?.beginTransaction()
+            fragmentTransaction?.replace(R.id.container2, flagment)
+            fragmentTransaction?.commit()
+
+        }
+
+        /**
+         * モニタ映像選択ボタン押下 flagment切り替え
+         */
+        val selectBtn2 = view.findViewById<Button>(R.id.selectBtn2)
+        selectBtn2.setOnClickListener {
+            /**
+             * monitorVideoSelFragment 表示
+             */
+            val flagment = monitorVideoSelFragment()
+
+            // flagmentにはActivityが無いのでactivityを使ってMainactivityの
+            // contextを取得する(thisは使えない)
+            val flagmentManager = activity?.supportFragmentManager
+            val fragmentTransaction = flagmentManager?.beginTransaction()
+            fragmentTransaction?.replace(R.id.container2, flagment)
+            fragmentTransaction?.commit()
+
+        }
+
+        /**
+         * プロジェクタ操作ボタン押下 flagment切り替え
+         */
+        val selectBtn5 = view.findViewById<Button>(R.id.selectBtn5)
+        selectBtn5.setOnClickListener {
+            /**
+             * projectorContFragment 表示
+             */
+            val flagment = projectorContFragment()
+
+            // flagmentにはActivityが無いのでactivityを使ってMainactivityの
+            // contextを取得する(thisは使えない)
+            val flagmentManager = activity?.supportFragmentManager
+            val fragmentTransaction = flagmentManager?.beginTransaction()
+            fragmentTransaction?.replace(R.id.container2, flagment)
+            fragmentTransaction?.commit()
+
+        }
+
+        /**
+         * スクリーン操作ボタン押下 flagment切り替え
+         */
+        val selectBtn6 = view.findViewById<Button>(R.id.selectBtn6)
+        selectBtn6.setOnClickListener {
+            /**
+             * screenContFragment 表示
+             */
+            val flagment = screenContFragment()
+
+            // flagmentにはActivityが無いのでactivityを使ってMainactivityの
+            // contextを取得する(thisは使えない)
+            val flagmentManager = activity?.supportFragmentManager
+            val fragmentTransaction = flagmentManager?.beginTransaction()
+            fragmentTransaction?.replace(R.id.container2, flagment)
+            fragmentTransaction?.commit()
+
+        }
+
+        /**
+         * 照明操作ボタン押下 flagment切り替え
+         */
+        val selectBtn7 = view.findViewById<Button>(R.id.selectBtn7)
+        selectBtn7.setOnClickListener {
+            /**
+             * lightContFlagment 表示
+             */
+            val flagment = lightContFragment()
+
+            // flagmentにはActivityが無いのでactivityを使ってMainactivityの
+            // contextを取得する(thisは使えない)
+            val flagmentManager = activity?.supportFragmentManager
+            val fragmentTransaction = flagmentManager?.beginTransaction()
+            fragmentTransaction?.replace(R.id.container2, flagment)
+            fragmentTransaction?.commit()
+
+        }
+
+        return view
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_page_select, container, false)
+        //return inflater.inflate(R.layout.fragment_page_select, container, false)
     }
 
     companion object {

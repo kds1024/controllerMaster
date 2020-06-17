@@ -1,10 +1,12 @@
 package kd2048.co.controllermaster
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -33,8 +35,40 @@ class startFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_start, container, false)
+        val view = inflater.inflate(R.layout.fragment_start, container, false)
+
+        /**
+         * システム起動ボタン イベント処理
+         */
+        val startBtn: Button = view.findViewById(R.id.startBtn)
+        startBtn.setOnClickListener {
+            /**
+             * startup flagment表示
+             */
+            val flagment = startupFragment()
+
+            // flagmentにはActivityが無いのでactivityを使ってMainactivityの
+            // contextを取得する(thisは使えない)
+            val flagmentManager = activity?.supportFragmentManager
+            val fragmentTransaction = flagmentManager?.beginTransaction()
+            fragmentTransaction?.replace(R.id.container2, flagment)
+            fragmentTransaction?.commit()
+
+            /**
+             * 起動カウント Intent Service起動
+             */
+            val intent = Intent(activity, startProgressIntentService::class.java)
+            // 起動時間をパラメーターに含める
+            intent.putExtra("count", getString(R.string.startupTime))
+            activity?.startService(intent)
+        }
+
+        return view
+
+        // Inflate the layout for this fragment
+        //return inflater.inflate(R.layout.fragment_start, container, false)
     }
 
     companion object {
